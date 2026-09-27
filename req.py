@@ -4,12 +4,7 @@ import pandas as pd
 import json
 
 st.title("🌐 Web Tablosu")
-url_1='https://jsonplaceholder.typicode.com/users'
 
-    
-
-result=requests.get(url_1)
-result=result.json()
 
 with open("yazı.json", "r", encoding="utf-8") as f:
   okunan_veri = json.load(f)
