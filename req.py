@@ -15,7 +15,8 @@ for i in result:
         "name":i["name"],
         "email":i["email"],
         "phone":i["phone"],
-        "address":i["address"]["city"]
+        "address":i["address"]["city"],
+        "username":i["username"]
                  })
 
 df=pd.DataFrame(List)
