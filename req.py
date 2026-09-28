@@ -26,11 +26,7 @@ if st.button("Kuru Hesapla"):
           f"{miktar} {bozdurulacak_para} = {yeni_miktar:.2f} {alinacak_para}"
       )
 
-      rates = result["conversion_rates"]
-      df = pd.DataFrame(list(rates.items()), columns=["Para Birimi", "Kur"])
-      st.subheader("Tüm Kurlar Tablosu")
-      st.dataframe(df, use_container_width=True)
-
+    
     else:
       st.error("API'den veri çekilirken bir hata oluştu.")
   except Exception as e:
