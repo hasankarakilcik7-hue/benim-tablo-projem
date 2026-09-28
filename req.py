@@ -8,6 +8,7 @@ bozdulurucak_para=st.selectbox("Bozdurulucak Para Birimi",["USD", "EUR", "TRY", 
 alınacak_para=st.selectbox("alınacak Para Birimi",["TRY", "EUR","USD" ,"GBP"])
 
 miktar=st.number_input("Miktar:",min_value=1.0,value=100.0)
+conversion_rates=0
 
 if st.button("Kuru Hesapla"):
     try:
