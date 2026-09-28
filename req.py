@@ -32,6 +32,6 @@ if st.button("Kuru Hesapla"):
         else:
             st.error("API'den veri çekilirken bir hata oluştu.")
     except Exception as e:
-        st.error(f"Bir hata oluştu: {e}")
+        st.error(f"Hata Detayı: {type(e).__name__} - {e}")
 
          
