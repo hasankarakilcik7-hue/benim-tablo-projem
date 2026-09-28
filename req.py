@@ -17,9 +17,10 @@ if st.button("Kuru Hesapla"):
         
 
         if response.status_code==200:
+            result=response.json()
             conversion_rates=result[conversion_rates][alınacak_para]
             yeni_miktar=miktar*conversion_rates
-            result=response.json()
+            
 
             st.success(f"{miktar} {bozdulurucak_para} = {yeni_miktar:.2f} {alınacak_para}")
 
