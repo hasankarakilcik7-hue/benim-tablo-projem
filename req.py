@@ -14,11 +14,12 @@ if st.button("Kuru Hesapla"):
     try:
         api_url=f" https://v6.exchangerate-api.com/v6/e3593749b274faf227a895e3/latest/{bozdulurucak_para}"
         response=requests.get(api_url)
-        result=response.json()
+        
 
         if response.status_code==200:
             conversion_rates=result[conversion_rates][alınacak_para]
             yeni_miktar=miktar*conversion_rates
+            result=response.json()
 
             st.success(f"{miktar} {bozdulurucak_para} = {yeni_miktar:.2f} {alınacak_para}")
 
